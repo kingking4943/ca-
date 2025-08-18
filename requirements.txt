@@ -1,0 +1,42 @@
+# Gestionale Gitemania PORTABLE - Dipendenze Moderne TechExpresso
+# Compatibili con Python 3.12
+
+# GUI Framework Moderno
+Pillow>=10.0.0
+ttkthemes>=3.2.2
+ttkbootstrap>=1.14.2
+customtkinter>=5.2.2
+darkdetect>=0.8.0
+
+# API Integration
+woocommerce>=3.0.0
+requests>=2.31.0
+
+# Security & Encryption
+cryptography>=41.0.3
+
+# Export & Data Processing
+pandas>=2.1.0
+openpyxl>=3.1.2
+python-docx>=0.8.11
+
+# Grafici e Visualizzazioni
+matplotlib>=3.7.0
+numpy>=1.24.0
+seaborn>=0.12.0
+
+# Scheduling
+schedule>=1.2.0
+
+# Web Server (per webhook)
+flask>=2.3.2
+waitress>=2.1.2
+
+# Date/Time Utils
+python-dateutil>=2.8.2
+
+# QR Code generation
+qrcode>=7.4.2
+
+# Packaging Tools
+pyinstaller>=5.13.0

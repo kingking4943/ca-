@@ -1,0 +1,31 @@
+{
+  "woocommerce": {
+    "base_url": "https://gitemania.com",
+    "consumer_key": "gAAAAABooizAawX-IuWXJpV4e0djVCAHNAUrrVc_pw6A6XmT4UmyhJzoXEv7ihjjqkdNTKKLMehvDIVzunrskt9ygZ3BpppBAHRCwIQ_HhgSXYGh5pdA5RMfrbZjwBMwzNhAGN0YS218",
+    "consumer_secret": "gAAAAABooizArcFRzHizf4luUKGTAn3f-Jyo61q7ygSebyhGDE0Q8S2He9h4HLBB8xAtNiLEH6XHQUdyNg78_O9A78NQ_iDZoXEx7HrRmmolNHl-N2UmWPdx_I7pKf19fCbOQcLvGH3z",
+    "version": "wc/v3"
+  },
+  "app": {
+    "sync_interval": 30,
+    "export_time": "00:00",
+    "polling_enabled": true,
+    "webhook_port": 5000,
+    "per_page": 50,
+    "first_run": false,
+    "use_local_db": true,
+    "auto_backup": true
+  },
+  "export": {
+    "csv_enabled": true,
+    "docx_enabled": true,
+    "auto_export": true,
+    "export_path": "/workspace/gestionale_gitemania/exports"
+  },
+  "database": {
+    "type": "sqlite",
+    "file": "/workspace/gestionale_gitemania/data/gitemania.db"
+  },
+  "supabase": {
+    "url": ""
+  }
+}
