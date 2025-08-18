@@ -1,1 +1,32 @@
+name: Build Gestionale Gitemania for Windows
 
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller
+
+    - name: Build executable with PyInstaller
+      run: |
+        pyinstaller --noconfirm --onefile --windowed --name "GestionaleGitemania" --icon "assets/icon.ico" --add-data "config.py;." --add-data "database_manager.py;." --add-data "woocommerce_api.py;." --add-data "export_manager.py;." --add-data "gui_components.py;." --add-data "theme_manager.py;." --add-data "modern_components.py;." --add-data "modern_dashboard.py;." gestionale_gitemania.py
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4 # <-- Ecco la correzione! v3 è diventato v4
+      with:
+        name: GestionaleGitemania-Windows
+        path: dist/GestionaleGitemania.exe
