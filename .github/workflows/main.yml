@@ -23,10 +23,10 @@ jobs:
 
     - name: Build executable with PyInstaller
       run: |
-        pyinstaller --noconfirm --onefile --windowed --name "GestionaleGitemania" --icon "assets/icon.ico" --add-data "config.py;." --add-data "database_manager.py;." --add-data "woocommerce_api.py;." --add-data "export_manager.py;." --add-data "gui_components.py;." --add-data "theme_manager.py;." --add-data "modern_components.py;." --add-data "modern_dashboard.py;." gestionale_gitemania.py
+        pyinstaller --noconfirm --onefile --windowed --name "GestionaleGitemania" --add-data "config.py;." --add-data "database_manager.py;." --add-data "woocommerce_api.py;." --add-data "export_manager.py;." --add-data "gui_components.py;." --add-data "theme_manager.py;." --add-data "modern_components.py;." --add-data "modern_dashboard.py;." gestionale_gitemania.py
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v4 # <-- Ecco la correzione! v3 è diventato v4
+      uses: actions/upload-artifact@v4
       with:
         name: GestionaleGitemania-Windows
         path: dist/GestionaleGitemania.exe
